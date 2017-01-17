@@ -1,0 +1,36 @@
+{
+  "id": 2,
+  "question": "question2",
+  "answers": [
+    {
+      "id": 4,
+      "answer": "answer1Q2",
+      "question": {
+        "id": 4,
+        "question": "question4",
+        "answers": [
+          {
+            "id": 7,
+            "answer": "answer1Q4",
+            "question": null
+          },
+          {
+            "id": 8,
+            "answer": "answer2Q4",
+            "question": null
+          },
+          {
+            "id": 9,
+            "answer": "answer3Q4",
+            "question": null
+          }
+        ]
+      }
+    },
+    {
+      "id": 5,
+      "answer": "answer2Q2",
+      "question": null
+    }
+  ]
+}
