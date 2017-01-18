@@ -60,6 +60,7 @@ CREATE TABLE user_questionnaire (
 CREATE TABLE user_questionnaire_data (
   survey_id   INT  NOT NULL,
   question_id INT  NOT NULL,
+  answer      BOOL NOT NULL DEFAULT 0,
   answered    BOOL NOT NULL DEFAULT 0,
   answer_id   INT  NULL,
   CONSTRAINT user_questionnaire_data_pk PRIMARY KEY (survey_id, question_id)
@@ -200,7 +201,8 @@ CREATE PROCEDURE `CLONE_QUESTION`(
       SELECT @newQuestionId AS cloned_question_id;
     END IF;
   END;;
-DELIMITER ;;
+DELIMITER ;
+;
 
 
 DROP PROCEDURE IF EXISTS RTN_CLONE_QUESTION;
@@ -297,8 +299,8 @@ CREATE PROCEDURE RTN_CLONE_QUESTION(
       SET MESSAGE_TEXT = 'QUESTION DOES NOT EXIST, AND THEREFORE CANNOT BE CLONED!';
     END IF;
   END ;;
-DELIMITER ;;
-
+DELIMITER ;
+;
 
 -- a little demonstration of how cloning works
 CALL CLONE_QUESTION(1, TRUE);
