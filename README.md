@@ -24,8 +24,7 @@ $ change URL connections to main and test DB if needed (MYSQL_DB_MAIN and MYSQL_
 
 Build and run application using GRADLE:
 ```
-$ gradle build
-& gradle bootRun
+$ ./gradlew clean build bootRun
 ```
 
 ## Create DB for tests:

@@ -24,6 +24,12 @@ repositories {
 }
 
 dependencies {
+    //my preference for connection pooling
+    compile group: 'com.zaxxer', name: 'HikariCP', version: '2.4.7'
+
+    //my preference for property management
+    compile group: 'com.netflix.archaius', name: 'archaius-core', version: '0.6.6'
+
     compile name: 'DBreader'
     compile 'org.springframework.boot:spring-boot-starter-web'
     compile 'org.slf4j:slf4j-api:1.7.21'
